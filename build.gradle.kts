@@ -51,8 +51,8 @@ dependencies {
     modImplementation(libs.creative.works)
     modImplementation(libs.imguimc)
 }
-val username = "vDev"
-val uuid: String? = null
+val username = System.getProperty("USERNAME", "vDev")
+val uuid: String? = System.getProperty("UUID")
 
 loom {
     splitEnvironmentSourceSets()
