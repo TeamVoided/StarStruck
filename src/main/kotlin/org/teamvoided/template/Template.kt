@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceLocation
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.teamvoided.template.config.TemplateConfig
+import org.teamvoided.template.init.NameDataComponents
 import org.teamvoided.template.init.NameEnchantEffects
 import org.teamvoided.template.init.NameEntityTypes
 import org.teamvoided.template.init.NameItems
@@ -22,6 +23,8 @@ object Template {
 
     fun init() {
         log.info("Hello from Common")
+
+        NameDataComponents.init()
         NameItems.init()
         NameTabs.init()
         NameEntityTypes.init()

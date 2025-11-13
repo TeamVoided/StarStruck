@@ -10,6 +10,6 @@ object TemplateClient {
     fun init() {
         Template.log.info("Hello from Client")
 
-        EntityRendererRegistry.register(NameEntityTypes.GAY_BEAM, ::NoopRenderer)
+        EntityRendererRegistry.register(NameEntityTypes.HAMMER_HEAD, ::NoopRenderer)
     }
 }

@@ -5,8 +5,8 @@ import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.entity.MobCategory
-import net.minecraft.world.entity.animal.allay.Allay
 import org.teamvoided.template.Template.id
+import org.teamvoided.template.entity.HammerHeadEntity
 
 
 @Suppress("unused", "MemberVisibilityCanBePrivate")
@@ -14,12 +14,11 @@ object NameEntityTypes {
     val ENTITY_TYPES = mutableListOf<EntityType<*>>()
 
     // Steel from : EntityType.class
-    val GAY_BEAM = register(
-        "gay_beam", EntityType.Builder.of(::Allay, MobCategory.CREATURE)
-            .sized(0.35f, 0.6f)
-            .eyeHeight(0.36f)
-            .ridingOffset(0.04f)
-            .clientTrackingRange(8).updateInterval(2)
+    val HAMMER_HEAD = register(
+        "hammer_head", EntityType.Builder.of(::HammerHeadEntity, MobCategory.MISC)
+            .sized(0.5f, 0.5f)
+            //(ender) prevents the item from being spawned by normal means, like `/summon`
+            .noSummon()
     )
 
 
