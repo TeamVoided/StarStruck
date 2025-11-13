@@ -5,6 +5,10 @@ import net.minecraft.resources.ResourceLocation
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.teamvoided.template.config.TemplateConfig
+import org.teamvoided.template.init.NameEnchantEffects
+import org.teamvoided.template.init.NameEntityTypes
+import org.teamvoided.template.init.NameItems
+import org.teamvoided.template.init.NameTabs
 
 @Suppress("unused")
 object Template {
@@ -18,6 +22,10 @@ object Template {
 
     fun init() {
         log.info("Hello from Common")
+        NameItems.init()
+        NameTabs.init()
+        NameEntityTypes.init()
+        NameEnchantEffects.init()
     }
 
     fun id(namespace: String, path: String): ResourceLocation = ResourceLocation.fromNamespaceAndPath(namespace, path)
