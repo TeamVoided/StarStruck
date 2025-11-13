@@ -20,5 +20,7 @@ object Template {
         log.info("Hello from Common")
     }
 
-    fun id(path: String) = ResourceLocation.fromNamespaceAndPath(MODID, path)
+    fun id(namespace: String, path: String): ResourceLocation = ResourceLocation.fromNamespaceAndPath(namespace, path)
+    fun mc(path: String): ResourceLocation = ResourceLocation.withDefaultNamespace(path)
+    fun id(path: String) = id(MODID, path)
 }
